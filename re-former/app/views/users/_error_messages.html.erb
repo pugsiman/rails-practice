@@ -1,0 +1,10 @@
+<div>
+<% if @user.errors.any? %>
+  <h4 style="color:rgb(64,110,158);"><%= pluralize(@user.errors.count, "problem") %> were found with your form:</h4>
+  <ul>
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+</div>
